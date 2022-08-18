@@ -17,7 +17,7 @@ app.get("/", (request, response) => {
 
 //message
 app.get("/message/:name", (request, response) => {
-  const name = request.params
+  const { name } = request.params
   const message = `Welcome, ${name}`
   response.send(message)
 })
